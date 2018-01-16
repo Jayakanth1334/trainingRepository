@@ -5,17 +5,11 @@ public class EmployeeSystem {
 
 	public static void main(String[] args) {
 
-		
-
-		
-		
-
+	
 		generateEmployee("tom", "jerry", "A", "December", "12213");
 		generateEmployee("kamal", "Hassan", "A", "Novemeber","32323");
 		
 		System.out.println(Employee.count);
-
-	
 
 	}
 
@@ -33,7 +27,6 @@ public class EmployeeSystem {
 		emp.setSalary(salary);
 		
 	System.out.println(emp.getFirstName()+" "+emp.getGrade());
-		
 		
 
 	}
