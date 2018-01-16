@@ -10,7 +10,7 @@ public class Employee {
 	static long count =0;
 	
 	
-	{
+	{ 
 		// test comment new
 		count++;
 	}
