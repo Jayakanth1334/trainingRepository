@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Employee {
 	
@@ -5,7 +7,8 @@ public class Employee {
 	private String lastName;
 	private String salary;
 	private String grade;
-	private String joiningMonth;
+	private Date joiningDate;
+	private Employee emp;
 	
 	static long count =0;
 	
@@ -40,14 +43,23 @@ public class Employee {
 	public void setGrade(String grade) {
 		this.grade = grade;
 	}
-	public String getJoiningMonth() {
-		return joiningMonth;
+	public String getJoiningDate() {
+		SimpleDateFormat sdf= new SimpleDateFormat("dd-mm-yyyy");
+		return sdf.format(joiningDate);
 	}
-	public void setJoiningMonth(String joiningMonth) {
-		this.joiningMonth = joiningMonth;
-	}
+	
 	public long getCount() {
 		return count;
+	}
+	public void setJoiningDate(Date date) {
+		// TODO Auto-generated method stub
+		this.joiningDate = date;
+	}
+	public void setEmployee(Employee emp) {
+		this.emp = emp;
+		
+		// TODO Auto-generated method stub
+		
 	}
 	
 
