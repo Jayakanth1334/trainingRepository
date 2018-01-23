@@ -1,14 +1,21 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Employee {
+public abstract class Employee implements Certification {
 	
 	private String firstName;
 	private String lastName;
-	private String salary;
+	private double salary;
 	private String grade;
 	private Date joiningDate;
-	private Employee emp;
+	private long uniqueId;
+	
+	
+	public Employee(String fName,String lName){
+		this();
+		this.firstName=fName;
+		this.lastName=lName;
+	}
 	
 	static long count =0;
 	
@@ -18,12 +25,23 @@ public class Employee {
 		count++;
 	}
 	
+	public Employee(){
+		this.uniqueId = count;
+		
+	}
 	
+	
+	public long getUniqueId() {
+		return uniqueId;
+	}
+	
+
 	public String getFirstName() {
 		return firstName;
 	}
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+		
 	}
 	public String getLastName() {
 		return lastName;
@@ -31,10 +49,10 @@ public class Employee {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getSalary() {
+	public double getSalary() {
 		return salary;
 	}
-	public void setSalary(String salary) {
+	public void setSalary(double salary) {
 		this.salary = salary;
 	}
 	public String getGrade() {
@@ -55,12 +73,9 @@ public class Employee {
 		// TODO Auto-generated method stub
 		this.joiningDate = date;
 	}
-	public void setEmployee(Employee emp) {
-		this.emp = emp;
-		
-		// TODO Auto-generated method stub
-		
-	}
+
+
+	
 	
 
 

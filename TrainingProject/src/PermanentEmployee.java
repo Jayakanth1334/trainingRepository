@@ -1,66 +1,41 @@
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PermanentEmployee extends Employee {
-	
-	private String firstName;
-	private String lastName;
-	private String salary;
-	private String grade;
-	private Date joiningDate;
-	
-	static long countPermanentEmployee =0;
-	
-	
-	{ 
-		// test comment new
+
+	private Mediclaim mclaim = new Mediclaim();
+
+	public Mediclaim getMclaim() {
+		return mclaim;
+	}
+
+	public void setMclaim(Mediclaim mclaim) {
+		this.mclaim = mclaim;
+	}
+
+	static long countPermanentEmployee = 0;
+
+	{
 		countPermanentEmployee++;
 	}
-	
-	
-	public String getFirstName() {
-		return firstName;
+
+	public PermanentEmployee(String fName, String lName, String grade, Date date, double salary) {
+		this(fName, lName);
+		this.setGrade(grade);
+		this.setJoiningDate(date);
+		this.setSalary(salary);
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+
+	public PermanentEmployee(String firstName, String lastname) {
+		super(firstName, lastname);
+
+		// TODO Auto-generated constructor stub
 	}
-	public String getLastName() {
-		return lastName;
+
+	public PermanentEmployee(String firstName, String lastname, String grade, Date date) {
+		this(firstName, lastname);
+		this.setGrade(grade);
+		this.setJoiningDate(date);
+		
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	public String getSalary() {
-		return salary;
-	}
-	public void setSalary(String salary) {
-		this.salary = salary;
-	}
-	public String getGrade() {
-		return grade;
-	}
-	public void setGrade(String grade) {
-		this.grade = grade;
-	}
-	public String getJoiningDate() {
-		SimpleDateFormat sdf= new SimpleDateFormat("dd-mm-yyyy");
-		return sdf.format(joiningDate);
-	}
-	
-	public long getCount() {
-		return count;
-	}
-	public void setJoiningDate(Date date) {
-		// TODO Auto-generated method stub
-		this.joiningDate = date;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

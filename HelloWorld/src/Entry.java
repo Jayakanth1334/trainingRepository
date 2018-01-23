@@ -17,5 +17,16 @@ public class Entry {
 		System.out.println(pRef == pRef2);
 		
 		
+		char a = 1;      // 1
+	    char b = '\61';    // 2
+	    char c = '\061';   // 3
+	    char d = 0x0031;   // 4
+	    char e = '\u0031'; // 5
+	    System.out.print(""+a+b+c+d+e);
+
+
+
+		
+		
 	}
 }
